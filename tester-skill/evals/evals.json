@@ -1,0 +1,48 @@
+{
+  "skill_name": "tester-skill",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate test cases for the AI refresh feature. The requirement is: Add a 'Refresh AI' button on the proposal editing page. Clicking it calls the backend API to regenerate AI content. The 'Enable AI' switch must be turned on as a precondition to use this feature. When the switch is off, the button is grayed out and cannot be clicked.",
+      "expected_output": "Generated test case documents in test_case/{date}/ including functional analysis, test points table, and detailed test cases grouped by P0/P1/P2 priority",
+      "files": [],
+      "expectations": [
+        "The output includes a functional analysis table identifying core features, related modules, and risk levels",
+        "The output includes a test point table with numbered test points, types, priorities, and test methods",
+        "P0 test cases cover core functionality like button click behavior and switch dependency",
+        "P1 test cases cover boundary and combination scenarios",
+        "At least one negative/abnormal scenario is included (e.g., switch off, repeated clicks)",
+        "Test cases follow the specified format with Test Objective, Preconditions, Test Steps, Expected Result, and Business Value sections",
+        "Output files are saved to test_case/{date}/ directory"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Design test points for this requirement: The knowledge source configuration module adds an 'Auto Sync' switch. When enabled, the system automatically syncs data from the external knowledge base every day at 2 AM. The switch is off by default. When sync fails, an email notification is sent to the administrator.",
+      "expected_output": "Test point design document with comprehensive coverage of configuration testing, boundary testing, and scenario testing for the auto-sync feature",
+      "files": [],
+      "expectations": [
+        "Test points cover switch enable/disable behavior",
+        "Test points cover scheduled task execution (daily at 2 AM)",
+        "Test points cover failure scenarios and email notification",
+        "Boundary values are considered (first sync, consecutive failures)",
+        "State transition scenarios are included (off -> on -> off)",
+        "Output is saved as markdown files in the test_case directory"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate test cases: The user management page adds a bulk import feature that supports uploading an Excel file to batch-create users. The Excel template contains three columns: Username, Email, and Role. It supports a maximum of 1000 records. The import result needs to display the number of successes and failures, and a failure report must be downloadable.",
+      "expected_output": "Detailed test cases covering file upload, data validation, batch processing, error handling, and result reporting for the bulk import feature",
+      "files": [],
+      "expectations": [
+        "Test cases cover normal Excel upload and processing",
+        "Test cases cover boundary values (0 records, 1 record, 1000 records, 1001 records)",
+        "Test cases cover invalid file types and malformed Excel files",
+        "Test cases cover data validation (invalid email, duplicate username, missing required fields)",
+        "Test cases cover error report generation and download functionality",
+        "Priority levels (P0/P1/P2) are assigned appropriately"
+      ]
+    }
+  ]
+}
