@@ -1,0 +1,23 @@
+{
+  "skill_name": "azure-pr-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this Azure DevOps PR: https://dev.azure.com/myorg/myproject/_git/myrepo/pullrequest/123",
+      "expected_output": "Fetches PR metadata and diff, generates inline comments and a summary review, presents them to the user, and waits for approval before posting.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you check my pull request at https://contoso.visualstudio.com/TeamProject/_git/WebApp/pullrequest/456 and leave some inline comments? Focus on potential bugs.",
+      "expected_output": "Fetches the PR, reviews with emphasis on bug detection, generates actionable inline comments, asks for approval, and posts only after user confirms.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I need a code review for an Azure PR. Here's the link: https://dev.azure.com/acme/Platform/_git/backend/pullrequest/789. Please look at security and performance issues.",
+      "expected_output": "Fetches PR info, filters for security and performance concerns, generates focused inline comments and summary, presents for approval, then posts to ADO.",
+      "files": []
+    }
+  ]
+}
